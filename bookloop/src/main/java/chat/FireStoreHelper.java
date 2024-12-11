@@ -14,7 +14,7 @@ public class FireStoreHelper {
 
     public static Firestore getFirestore() throws IOException {
         if (db == null) {
-            FileInputStream serviceAccount = new FileInputStream("src/main/resource/serviceAccountKey.json");
+            FileInputStream serviceAccount = new FileInputStream("src/main/resources/serviceAccountKey.json");
 
             FirebaseOptions options = FirebaseOptions.builder()
                     .setCredentials(GoogleCredentials.fromStream(serviceAccount))
