@@ -12,7 +12,7 @@ public class FirebaseInit {
         try {
            
             FileInputStream serviceAccount =
-                new FileInputStream("bookloop/src/main/resources/bookloop-5d51a-firebase-adminsdk-ptztt-59a495ea0b.json");
+                new FileInputStream("src/main/resources/serviceAccountKey.json");
 
             FirebaseOptions options = FirebaseOptions.builder()
                 .setCredentials(GoogleCredentials.fromStream(serviceAccount))

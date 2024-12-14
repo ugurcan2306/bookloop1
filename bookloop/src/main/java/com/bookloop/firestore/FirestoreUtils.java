@@ -49,7 +49,7 @@ public class FirestoreUtils {
         addUserToFirestore(db, "ugurcan23", "bilkentcs", "ugurcan@bilkent.edu.tr","Turkey", "Ankara",List.of("1984", "Animal Farm"), List.of("1984", "Animal Farm","InceMehmed"),new ArrayList<>(), new ArrayList<>(),new ArrayList<>());
       
     }
-    public static void addBookstoTheFirestore(Firestore db,String name, double rate, ArrayList<String> comments,ArrayList<String>bookowners, String description,String Url){
+    public static void addBookstoTheFirestore(Firestore db,String name, double rate, ArrayList<String> comments,ArrayList<String>bookowners, String description){
         //image ekleme işi nasıl olur
         Map<String, Object> books = new HashMap<>();
         books.put("Name",name);
@@ -74,8 +74,8 @@ public class FirestoreUtils {
     ArrayList<String> BookOwners= new ArrayList<>();
     BookOwners.add("ugurcan23");
     // Upload the image and get its URL
-    String imageUrl = FirebaseStorageUtils.uploadImageToFirebaseStorage("animalfarm.jpg", "animalfarm.jpg");
+    
     // Store the image URL in Firestore
-        addBookstoTheFirestore(db, "Animal Farm", 4.8, comments,BookOwners, "George Orwell's fable book published in 1945",imageUrl);
+        addBookstoTheFirestore(db, "Animal Farm", 4.8, comments,BookOwners, "George Orwell's fable book published in 1945");
     }
 }

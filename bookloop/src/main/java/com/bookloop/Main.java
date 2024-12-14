@@ -10,7 +10,7 @@ import com.google.cloud.firestore.FirestoreOptions;
 public class Main {
     public static void main(String[] args) throws IOException {
         // Set up Google Application credentials for Firestore
-        System.setProperty("GOOGLE_APPLICATION_CREDENTIALS", "bookloop/src/main/resources/bookloop-5d51a-firebase-adminsdk-ptztt-59a495ea0b.json");
+        System.setProperty("GOOGLE_APPLICATION_CREDENTIALS", "src/main/resources/serviceAccountKey.json");
 
         // Initialize Firebase
         FirebaseInit.initializeFirebase();
